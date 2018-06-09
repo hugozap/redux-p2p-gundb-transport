@@ -1,0 +1,44 @@
+{
+  "name": "redux-p2p-gundb-transport",
+  "version": "1.0.0",
+  "description": "gundb transport that supports offline access and replication using GunDB",
+  "main": "./build/main.bundle.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack",
+    "prepublishOnly": "yarn test && yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugozap/redux-p2p-gundb-transport.git"
+  },
+  "keywords": [
+    "redux",
+    "gundb",
+    "p2p"
+  ],
+  "author": "Hugo Zapata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugozap/redux-p2p-gundb-transport/issues"
+  },
+  "homepage": "https://github.com/hugozap/redux-p2p-gundb-transport#readme",
+  "dependencies": {
+    "events": "^3.0.0",
+    "gun": "amark/gun"
+  },
+  "peerDependencies": {
+    "redux": "^4.0.0",
+    "redux-p2p-middleware": "^1.0.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.1.0",
+    "webpack": "^4.10.1",
+    "webpack-cli": "^2.1.4"
+  }
+}
