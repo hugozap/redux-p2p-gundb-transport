@@ -3,8 +3,7 @@ var EventEmitter = require("events").EventEmitter;
 
 //Receives the Gun constructor (different for node and browser)
 function createGunTransport(Gun) {
-
-    util.inherits(GunDbTransport, EventEmitter)
+    util.inherits(GunDbTransport, EventEmitter);
 
     function GunDbTransport(opts) {
         if (!(this instanceof GunDbTransport)) return new GunDbTransport(opts);
@@ -16,7 +15,7 @@ function createGunTransport(Gun) {
             .map()
             .on(objAction => {
                 let action = JSON.parse(objAction.action);
-                this.emit("action", {id:objAction.id, action:action});
+                this.emit("action", { id: objAction.id, action: action });
             });
     }
 
@@ -30,6 +29,5 @@ function createGunTransport(Gun) {
 
     return GunDbTransport;
 }
-
 
 module.exports = createGunTransport;

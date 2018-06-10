@@ -30,7 +30,8 @@ const store = createStore(myRootReducer, applyMiddleware(replicator))
 
 GunDbTransport(opts)
 
-opts can be a string with the url of the gundb server.
+opts can be a string with the url of the gundb server
+or an object with additional gun options.
 
 For additional options see [https://gun.eco/docs/API#gun](https://gun.eco/docs/API#gun)
 
