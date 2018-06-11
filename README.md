@@ -33,7 +33,18 @@ GunDbTransport(opts)
 opts can be a string with the url of the gundb server
 or an object with additional gun options.
 
+```
+{
+    room:'room name',
+    ... other specific gundb options
+}
+```
+
+If you set a room name, then only actions emitted by peers on the same room will be replicated.
+
 For additional options see [https://gun.eco/docs/API#gun](https://gun.eco/docs/API#gun)
+
+
 
 # Setup a Gun Server
 

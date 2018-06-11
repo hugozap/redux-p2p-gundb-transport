@@ -8,10 +8,11 @@ function createGunTransport(Gun) {
     function GunDbTransport(opts) {
         if (!(this instanceof GunDbTransport)) return new GunDbTransport(opts);
         this.gun = Gun(opts);
-        this.opts = opts;
+        this.opts = opts || {};
+        this.room = this.opts.room || "lounge";
         //create subscription to items in actions collection
         this.gun
-            .get("actions")
+            .get(this.room).get("actions")
             .map()
             .on(objAction => {
                 let action = JSON.parse(objAction.action);
@@ -24,7 +25,7 @@ function createGunTransport(Gun) {
             id: actionMsg.id,
             action: JSON.stringify(actionMsg.action)
         };
-        this.gun.get("actions").set(gunObj);
+        this.gun.get(this.room).get("actions").set(gunObj);
     };
 
     return GunDbTransport;
