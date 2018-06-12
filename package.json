@@ -1,6 +1,6 @@
 {
   "name": "redux-p2p-gundb-transport",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "gundb transport that supports offline access and replication using GunDB",
   "main": "./build/main.bundle.js",
   "scripts": {
